@@ -2,7 +2,7 @@ podTemplate(yaml: readTrusted('pod.yaml')) {
   node(POD_LABEL) {
     stage('Checkout Source') {
         
-      git branch: 'main', url: 'https://github.com/maxpain62/eos-catalog-api.git'
+      git branch: 'main', url: 'https://github.com/maxpain62/eos-payment-api.git'
       script {
             // Capture tag into a Groovy variable
             env.GIT_TAG = sh(
